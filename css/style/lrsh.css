@@ -1,0 +1,80 @@
+body {
+    background: #404040 url(../../images/bg/lrsh-green.jpg);
+    font-size: 16px;
+}
+
+header {
+    background: #582618 url(../../images/bg/lrsh-red.png);
+    margin-bottom: 20px;
+}
+
+#public-nav-main {
+    background: #e8c7a5 url(../../images/bg/lrsh-beige.png);
+    padding: 6px;
+}
+
+#public-nav-main .navbar-toggle {
+    top: 16px;
+}
+
+#public-nav-main .navbar-nav {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+#public-nav-main .navbar-nav > li > a {
+    color: #582618;
+    font-weight: bold;
+}
+
+@media (min-width: 767px) {
+    #public-nav-main .navbar-nav {
+        margin: 8px 0;
+    }
+
+    #public-nav-main .navbar-nav > li > a {
+        padding: 15px 20px;
+    }
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 2px #855422 inset;
+}
+
+.item.show #public-nav-main .navbar-nav > li.active > a {
+    background: inherit;
+    box-shadow: inherit;
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    background: rgba(255, 255, 255, 0.4) !important;
+    box-shadow: 0 0 2px #855422 inset !important;
+}
+
+main {
+    background: #fff;
+    padding: 12px;
+}
+
+main h1 {
+    font-weight: bold;
+}
+
+main .lead {
+    color: #582618;
+}
+
+footer {
+    background: #e8c7a5;
+    border-top: 3px solid #582618;
+    box-shadow-top: none;
+    margin-top: 0;
+    padding: 3px 12px;
+}
+
+.record-nav, #exhibit-pages {
+    display: none !important;
+}

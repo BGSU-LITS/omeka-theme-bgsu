@@ -1,0 +1,70 @@
+body {
+    background: #ccc url(../../images/bg/hse-aluminum.png);
+}
+
+header {
+    background: #3f291c;
+}
+
+#public-nav-main {
+    background: #3f291c url(../../images/bg/hse-wood.jpg);
+    box-shadow: 0 0 4px 0 #000, 0 0 12px 0 #000 inset;
+}
+
+#public-nav-main .navbar-toggle {
+    top: 45px;
+    right: 8px;
+}
+
+#public-nav-main .navbar-nav {
+    background: #eee url(../../images/bg/hse-brushed.png);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+#public-nav-main .navbar-nav > li > a {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    color: #000;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+#public-nav-main .navbar-nav > li:last-child > a {
+    border-bottom: none;
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: transparent;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.2) inset;
+}
+
+.item.show #public-nav-main .navbar-nav > li.active > a {
+    background: inherit;
+    box-shadow: inherit;
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    box-shadow: 0 0 30px 0 rgba(255, 255, 255, 0.8) inset !important;
+}
+
+main {
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.37);
+}
+
+.btn, .btn:hover, .btn:focus {
+    background: #eee url(../../images/bg/hse-brushed.png);
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0;
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.25);
+    color: #000;
+    text-shadow: 1px 1px 1px #fff;
+}
+
+.btn:hover, .btn:focus {
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1) inset,
+        2px 2px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+.form-control {
+    border-radius: 0;
+}

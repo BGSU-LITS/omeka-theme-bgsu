@@ -1,0 +1,65 @@
+body {
+    background: #fff url(../../images/bg/nyc.png);
+}
+
+header {
+    background: #4e4279;
+}
+
+#public-nav-main {
+    background: #aca6c0;
+    margin: 0 -9998px;
+    padding: 0 9999px;
+}
+
+#public-nav-main .navbar-brand {
+    display: none;
+}
+
+#public-nav-main .navbar-toggle {
+    margin: 8px 0;
+}
+
+#public-nav-main .nav {
+    background: none;
+    border: none;
+    box-shadow: none;
+    float: none !important;
+}
+
+#public-nav-main .navbar-nav > li > a {
+    border-radius: 0;
+    color: #4e4279;
+    text-shadow: none;
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: #fff;
+    box-shadow: none;
+}
+
+.item.show #public-nav-main .navbar-nav > li.active > a {
+    background: inherit;
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    background: #b7b1cd !important;
+}
+
+main {
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    padding: 15px;
+}
+
+main h1 {
+    color: #4e4279;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+#exhibit-pages {
+    display: none !important;
+}

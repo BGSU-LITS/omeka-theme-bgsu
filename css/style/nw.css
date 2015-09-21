@@ -1,0 +1,99 @@
+body {
+    background: #ead6ba;
+    font-size: 16px;
+}
+
+header {
+    background: #0c1f57;
+}
+
+#public-nav-main .navbar-toggle {
+    top: 118px;
+    right: 5px;
+}
+
+#public-nav-main .navbar-nav {
+    background: #fff;
+    border: none;
+    box-shadow: none;
+}
+
+#public-nav-main .navbar-nav > li > a {
+    border-bottom: 1px solid #0c1f57;
+    color: #333;
+}
+
+#public-nav-main .navbar-nav > li:last-child > a {
+    border-bottom: none;
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.item.show #public-nav-main .navbar-nav > li.active > a {
+    background: inherit;
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    background: rgba(0, 0, 0, 0.05) !important;
+}
+
+main {
+    background: #f1eadb;
+    border-left: 290px solid #f5f0e5;
+    margin-left: 0;
+}
+
+@media (max-width: 767px) {
+    main {
+        border-left: none !important;
+    }
+}
+
+main h1 {
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+main hr {
+    border-top: 2px solid #0c1f57;
+}
+
+footer {
+    background: #f1eadb;
+    padding: 15px;
+}
+
+.hTagcloud .popularity li, .record .tags a, .element .tags a {
+    background: #eae0ca;
+}
+
+.hTagcloud .popularity li:before, .record .tags a:before, .element .tags a:before {
+    color: #f1eadb;
+}
+
+@media (min-width: 768px) {
+    .featured-carousel-display,
+    .featured-carousel-display li {
+        width: 850px;
+        height: 478px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .featured-carousel-display,
+    .featured-carousel-display li {
+        width: 650px;
+        height: 366px;
+    }
+}
+
+@media (max-width: 991px) {
+    .featured-carousel-display,
+    .featured-carousel-display li {
+        width: 430px;
+        height: 242px;
+    }
+}

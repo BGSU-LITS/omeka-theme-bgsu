@@ -1,0 +1,50 @@
+body {
+    background: #eee url(../../images/bg/fa.png);
+}
+
+header {
+    background: #464646;
+}
+
+header .header-search {
+    display: block !important;
+}
+
+header .form-inline .form-control,
+header .form-inline .form-group {
+    width: auto;
+    display: inline-block;
+}
+
+main {
+    background: #fff;
+    border: 1px solid #969696;
+    border-top: none;
+    padding: 20px;
+}
+
+main h1 {
+    margin-top: 0;
+}
+
+main h3 {
+    color: #ff7300;
+}
+
+.record-nav, #exhibit-pages {
+    display: none !important;
+}
+
+.element {
+    border-bottom: 1px solid #b0b0b0;
+    padding-bottom: 20px;
+}
+
+.item-file {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.item-file img {
+    box-shadow: none !important;
+}

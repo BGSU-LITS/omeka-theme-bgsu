@@ -1,0 +1,80 @@
+#comment-form {
+    background: #e7e7e7;
+    border-radius: 4px;
+    font: 14px/1.2 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 1em 0 0 0;
+    max-width: 500px;
+    padding: 1em;
+}
+
+#comment-form .commenting-field {
+    margin-bottom: 1em;
+}
+
+#comment-form .commenting-field label {
+    width: 30%;
+    vertical-align: top;
+}
+
+#comment-form .commenting-field label[for="captcha"] {
+    width: 100%;
+}
+
+#comment-form .commenting-field input[type="text"] {
+    width: 68%;
+}
+
+#comment-form .commenting-explanation {
+    display: inline-block;
+    font-size: 0.85em;
+    width: 68%;
+}
+
+.comment {
+    border-radius: 4px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    clear: both;
+    margin: 1em 0 0 0;
+    padding: 1em;
+}
+
+.comment .gravatar {
+    float: left;
+    margin: 0 1em 1em 0;
+}
+
+.comment .comment-author {
+    font-weight: bold;
+}
+
+.comment .comment-body {
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    clear: both;
+}
+
+.comment .comment-reply,
+.comment .comment-flag,
+.comment .comment-unflag {
+    color: #ff7300;
+    cursor: pointer;
+    font-size: 0.85em;
+    margin: 0;
+}
+
+.comment .comment-reply:hover,
+.comment .comment-reply:focus,
+.comment .comment-flag:hover,
+.comment .comment-flag:focus,
+.comment .comment-unflag:hover,
+.comment .comment-unflag:focus {
+    color: #b35100;
+}
+
+.comment .comment-flag,
+.comment .comment-unflag {
+    float: right;
+}
+
+div.comment-flagged {
+    color: #e7e7e7;
+}

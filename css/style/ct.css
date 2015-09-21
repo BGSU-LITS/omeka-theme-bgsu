@@ -1,0 +1,87 @@
+body {
+    background: #dfe5f2 url(../../images/bg/ct-map.png);
+    font-size: 16px;
+}
+
+header {
+    background: #464142 url(../../images/bg/ct-stripe.png);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.53);
+}
+
+#public-nav-main {
+    background: #fff;
+    border-top: 10px solid #000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.53);
+}
+
+#public-nav-main .navbar-toggle {
+    top: 380px;
+    right: 5px;
+}
+
+#public-nav-main .navbar-nav {
+    background: #fff;
+    border: 4px solid #000;
+    box-shadow: none;
+}
+
+#public-nav-main .navbar-nav > li > a {
+    border-bottom: 1px solid #000;
+    color: #000;
+}
+
+#public-nav-main .navbar-nav > li:last-child > a {
+    border-bottom: none;
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: rgba(196, 197, 164, 0.2);
+}
+
+.item.show #public-nav-main .navbar-nav > li.active > a {
+    background: inherit;
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    background: rgba(196, 197, 164, 0.4) !important;
+}
+
+main {
+    border-top: 10px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.53);
+}
+
+main h1 {
+    font-family: 'Oleo Script', cursive;
+}
+
+footer {
+    background: #464142 url(../../images/bg/ct-stripe.png);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.53);
+    color: #fff;
+    padding: 16px;
+}
+
+#exhibit-page-navigation, .breadcrumb {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    main {
+        padding: 32px;
+    }
+
+    .featured-carousel {
+        margin: -32px;
+        margin-bottom: 1em;
+    }
+
+    .featured-carousel-control {
+        margin-right: 32px;
+    }
+
+    .featured-carousel-display a div {
+        padding-right: 32px;
+    }
+}

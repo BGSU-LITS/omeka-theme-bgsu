@@ -1,0 +1,79 @@
+body {
+    background: #0f0 url(../../images/bg/ccam.jpg);
+}
+
+header {
+    background: rgba(155, 89, 45, 0.9);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 20;
+}
+
+#public-nav-main {
+    background: rgba(255, 115, 0, 0.9);
+    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.3);
+    margin: 0 -9999px;
+    padding: 0 9999px;
+    position: relative;
+    z-index: 10;
+}
+
+#public-nav-main .navbar-brand {
+    display: none;
+}
+
+#public-nav-main .navbar-toggle {
+    margin: 8px 0;
+}
+
+#public-nav-main .nav {
+    background: none;
+    border: none;
+    box-shadow: none;
+    float: none !important;
+}
+
+#public-nav-main .navbar-nav > li > a {
+    border-radius: 0;
+    color: #5C341B;
+    text-shadow: none;
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: #fff;
+    box-shadow: none;
+}
+
+.item.show #public-nav-main .navbar-nav > li.active > a {
+    background: inherit;
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+main {
+    background: #fff;
+    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    position: relative;
+    z-index: 20;
+}
+
+main h1 {
+    color: #5C341B;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+footer {
+    background: rgba(155, 89, 45, 0.9);
+    box-shadow: 0 2px 1px 1px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    padding: 15px;
+}
+
+#exhibit-pages {
+    display: none !important;
+}

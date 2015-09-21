@@ -1,0 +1,76 @@
+body {
+    background: #eee url(../../images/bg/aao-dust.jpg);
+}
+
+header {
+    background: #86341f;
+}
+
+#public-nav-main {
+    background: #acc1ba url(../../images/bg/aao-speck.png);
+    border: 5px solid #fff;
+    box-shadow: 0 0 4px 0 #acc1ba;
+}
+
+#public-nav-main .navbar-toggle {
+    top: 150px;
+    right: 5px;
+}
+
+#public-nav-main .navbar-header {
+    background: #fff;
+    box-shadow: 0 0 6px 0 #bbb inset;
+    padding: 15px;
+}
+
+#public-nav-main .navbar-search {
+    margin-top: 20px;
+}
+
+#public-nav-main .navbar-nav {
+    background: #eee url(../../images/bg/aao-paper.jpg);
+    border: 1px solid #7da1a3;
+    box-shadow: none;
+}
+
+#public-nav-main .navbar-nav > li > a {
+    border-bottom: 1px solid #7da1a3;
+    color: #4d6b6d;
+}
+
+#public-nav-main .navbar-nav > li:last-child > a {
+    border-bottom: none;
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: rgba(241, 181, 23, 0.1);
+}
+
+.item.show #public-nav-main .navbar-nav > li.active > a {
+    background: inherit;
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    background: rgba(241, 181, 23, 0.2) !important;
+}
+
+main {
+    box-shadow: 0 0 4px 0 #acc1ba;
+}
+
+main h1 {
+    font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal,
+        "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+}
+
+footer {
+    background: #fff;
+    box-shadow: 0 0 4px 0 #acc1ba;
+    padding: 5px;
+}
+
+footer .outer {
+    background: #eee url(../../images/bg/aao-paper.jpg);
+    padding: 8px;
+}

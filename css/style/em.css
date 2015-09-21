@@ -1,0 +1,65 @@
+body {
+    background: #fff url(../../images/bg/em.jpg);
+}
+
+header {
+    background: #677CCD;
+}
+
+#public-nav-main {
+    background: #72C6C5;
+    margin: 0 -9998px;
+    padding: 0 9999px;
+}
+
+#public-nav-main .navbar-brand {
+    display: none;
+}
+
+#public-nav-main .navbar-toggle {
+    margin: 8px 0;
+}
+
+#public-nav-main .nav {
+    background: none;
+    border: none;
+    box-shadow: none;
+    float: none !important;
+}
+
+#public-nav-main .navbar-nav > li > a {
+    border-radius: 0;
+    color: #fff;
+    text-shadow: none;
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: #fff;
+    color: #72C6C5;
+    box-shadow: none;
+}
+
+.item.show #public-nav-main .navbar-nav > li.active > a {
+    background: inherit;
+    color: #fff;
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    background: #79D3D2 !important;
+}
+
+main {
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    padding: 15px;
+}
+
+main h1 {
+    color: #f5af3e;
+}
+
+#exhibit-pages {
+    display: none !important;
+}

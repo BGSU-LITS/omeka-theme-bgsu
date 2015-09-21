@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Sorts Mill Goudy';
+    src: url('../../fonts/goudystm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sorts Mill Goudy';
+    src: url('../../fonts/goudystm-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+header {
+    background: #ff7300;
+    margin: 0 0 20px 0;
+}
+
+#public-nav-main .navbar-brand {
+    font: 45px/1 'Sorts Mill Goudy', serif;
+    text-rendering: optimizeLegibility;
+}
+
+#public-nav-main .navbar-brand,
+#public-nav-main .navbar-brand:hover,
+#public-nav-main .navbar-brand:focus {
+    color: #000;
+}
+
+@media (max-width: 991px) {
+    #public-nav-main .navbar-brand {
+        width: 240px;
+    }
+}
+
+#public-nav-main .navbar-brand .text-muted {
+    font-size: 33%;
+}
+
+#home #content {
+    min-height: calc(100vh - 300px);
+}

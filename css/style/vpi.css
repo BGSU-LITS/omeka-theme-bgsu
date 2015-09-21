@@ -1,0 +1,144 @@
+body {
+    background: #e3cda4 url(../../images/bg/vpi-beige.png);
+}
+
+header {
+    background: #2f343b url(../../images/bg/vpi-blue.png);
+    background-position: 50%;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    margin-bottom: 0;
+    padding: 7px 0;
+}
+
+@media (max-width: 767px) {
+    header {
+        background-position: 0;
+    }
+}
+
+header .wrapper {
+    border-top: 1px solid #7e827a;
+    border-bottom: 1px solid #7e827a;
+}
+
+#public-nav-main {
+    width: 258px;
+}
+
+#public-nav-main .navbar-toggle {
+    top: 318px;
+}
+
+#public-nav-main .navbar-header {
+    margin: -28px 0 0 0;
+}
+
+#public-nav-main .navbar-collapse  {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+}
+
+#public-nav-main .navbar-search {
+    background: #8a101e url(../../images/bg/vpi-red.png);
+    padding: 8px;
+}
+
+#public-nav-main .navbar-search .navbar-form {
+    border: 1px solid #c77966;
+    margin: 0;
+    padding: 8px;
+}
+
+#public-nav-main .navbar-nav {
+    background: #2f343b url(../../images/bg/vpi-blue.png);
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 8px;
+}
+
+#public-nav-main .navbar-nav > li {
+    border-left: 1px solid #5c6674;
+    border-right: 1px solid #5c6674;
+}
+
+#public-nav-main .navbar-nav > li > a {
+    border-bottom: 1px solid #464d57;
+    border-top: 1px solid #020202;
+    color: #e3cda4;
+    text-shadow: 1px 3px 0 #000;
+}
+
+#public-nav-main .navbar-nav > li:first-child > a {
+    border-top: 1px solid #5c6674;
+}
+
+#public-nav-main .navbar-nav > li:last-child > a {
+    border-bottom: 1px solid #5c6674;
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.75) inset;
+}
+
+.item.show #public-nav-main .navbar-nav > li.active > a {
+    background: inherit;
+    box-shadow: inherit;
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    background: rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.75) inset !important;
+}
+
+main {
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    margin-left: 278px;
+}
+
+footer {
+    background: #2f343b url(../../images/bg/vpi-blue.png);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.37);
+    color: #e3cda4;
+    padding: 7px;
+}
+
+footer .outer {
+    border: 1px solid #7e827a;
+    padding: 8px;
+}
+
+footer a {
+    color: #fff;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #e3e3e3;
+}
+
+
+@media (min-width: 768px) {
+    .featured-carousel-display,
+    .featured-carousel-display li {
+        width: 862px;
+        height: 485px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .featured-carousel-display,
+    .featured-carousel-display li {
+        width: 662px;
+        height: 372px;
+    }
+}
+
+@media (max-width: 991px) {
+    .featured-carousel-display,
+    .featured-carousel-display li {
+        width: 442px;
+        height: 249px;
+    }
+}
