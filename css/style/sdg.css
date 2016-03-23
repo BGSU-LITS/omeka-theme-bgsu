@@ -1,0 +1,33 @@
+body {
+    background: #eee url(../../images/bg/sdg.png);
+}
+
+header {
+    background: transparent;
+}
+
+#content {
+    min-height: calc(100vh - 332px);
+}
+
+#content a, footer a {
+    font-style: italic;
+}
+
+a.thumbnail {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+a.thumbnail strong {
+    color: #F9A31A;
+    font-size: 1.2em;
+}
+
+h1 {
+    color: #32698A;
+    font-weight: bold;
+}
+
+hr {
+    border-color: #D6E9C7;
+}
