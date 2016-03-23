@@ -37,7 +37,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
 
 <?php if (!empty($style['item']['show']['pictures'])): ?>
     <?php if ($content = metadata('item', array(ElementSet::ITEM_TYPE_NAME, 'Content'))): ?>
-        <div id="itemfiles" class="element pictures clearfix">
+        <div id="itemfiles" class="element pictures">
             <?php if (is_string($style['item']['show']['pictures'])): ?>
                 <h3><?php echo $style['item']['show']['pictures']; ?></h3>
             <?php endif; ?>
@@ -46,7 +46,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
             </div>
         </div>
     <?php elseif (metadata('item', 'has files')): ?>
-        <div id="itemfiles" class="element pictures clearfix">
+        <div id="itemfiles" class="element pictures">
             <?php if (is_string($style['item']['show']['pictures'])): ?>
                 <h3><?php echo $style['item']['show']['pictures']; ?></h3>
             <?php endif; ?>
@@ -94,7 +94,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
 <?php echo all_element_texts('item', array('show_element_set_headings' => false)); ?>
 
 <?php if (!empty($style['item']['show']['files']) && metadata('item', 'has files')): ?>
-    <div id="itemfiles" class="element clearfix">
+    <div id="itemfiles" class="element">
         <?php if (is_string($style['item']['show']['files'])): ?>
             <h3><?php echo $style['item']['show']['files']; ?></h3>
         <?php endif; ?>

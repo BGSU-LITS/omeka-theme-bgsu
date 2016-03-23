@@ -83,7 +83,7 @@
         </div>
     </header>
 
-    <div class="container">
+    <div class="container clearfix">
         <?php if (!empty($style['navbar'])): ?>
             <nav id="public-nav-main" class="navbar navbar-default">
                 <div class="navbar-header">

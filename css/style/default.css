@@ -38,6 +38,6 @@ header {
     font-size: 33%;
 }
 
-#home #content {
+#content {
     min-height: calc(100vh - 300px);
 }

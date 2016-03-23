@@ -55,13 +55,19 @@ footer {
     margin: 20px 0;
 }
 
-footer .col-md-4 {
-    line-height: 50px;
+footer .col-sm-4, footer .col-sm-8 {
+    display: table;
+    min-height: 52px;
 }
 
-@media (max-width: 991px) {
-    footer {
-        line-height: inherit;
+footer .col-sm-4 > div, footer .col-sm-8 > div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+    footer .col-sm-4, footer .col-sm-8 {
+        min-height: 0;
     }
 
     footer .text-center, footer .text-right {

@@ -9,7 +9,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'login'), $header);
 <ul class="list-inline">
     <li><?php echo link_to_home_page(__('Go to Home Page')); ?></li>
 
-    <?php if (!$required): ?>
+    <?php if (empty($required)): ?>
         <li><?php echo link_to('users', 'forgot-password', __('Lost your password?')); ?></li>
     <?php endif; ?>
 </ul>
