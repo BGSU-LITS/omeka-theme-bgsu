@@ -1,7 +1,8 @@
-<h1><?php echo __('Welcome'); ?></h1>
+<?php $collections = get_records('Collection'); ?>
 
+<h1><?php echo __('Welcome'); ?></h1>
 <div class="row">
-    <?php foreach(get_recent_collections(2) as $collection): ?>
+    <?php foreach($collections as $collection): ?>
         <div class="col-sm-6">
             <h3>
                 <?php
@@ -39,3 +40,13 @@
         </div>
     <?php endforeach; ?>
 </div>
+
+<script src="https://lib.bgsu.edu/assets/js/masonry.pkgd.js"></script>
+<script>
+jQuery(window).load(function() {
+    new Masonry(
+        'main .row',
+        {'percentPosition': true, transitionDuration: 0}
+    );
+});
+</script>
