@@ -56,26 +56,37 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
                     $w = '';
                     $h = '';
 
-                    if ($file->has_derivative_image) {
-                        $metadata = json_decode($file->metadata, true);
+                    $mime_types = array(
+                        'image/gif',
+                        'image/jpeg',
+                        'image/png',
+                        'application/pdf'
+                    );
 
-                        if (!empty($metadata['video']['resolution_x'])
-                         && !empty($metadata['video']['resolution_y'])) {
-                            $w = $metadata['video']['resolution_x'];
-                            $h = $metadata['video']['resolution_y'];
-                        } else {
-                            $path = FILES_DIR. '/'.
-                                $file->getStoragePath('fullsize');
-                            $size = getimagesize($path);
+                    $watermark = get_theme_option('Watermark') !== '0';
 
-                            if (!empty($size[0]) && !empty($size[1])) {
-                                $w = $size[0];
-                                $h = $size[1];
+                    if (in_array($file->mime_type, $mime_types)) {
+                        if ($file->has_derivative_image) {
+                            $metadata = json_decode($file->metadata, true);
+
+                            if (!empty($metadata['video']['resolution_x'])
+                             && !empty($metadata['video']['resolution_y'])) {
+                                $w = $metadata['video']['resolution_x'];
+                                $h = $metadata['video']['resolution_y'];
+                            } else {
+                                $path = FILES_DIR. '/'.
+                                    $file->getStoragePath('fullsize');
+                                $size = getimagesize($path);
+
+                                if (!empty($size[0]) && !empty($size[1])) {
+                                    $w = $size[0];
+                                    $h = $size[1];
+                                }
                             }
                         }
                     }
 
-                    echo file_markup(
+                    $file_markup = file_markup(
                         $file,
                         array('imageSize' => 'thumbnail'),
                         array(
@@ -84,6 +95,24 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
                             'data-h' => (string) $h
                         )
                     );
+
+                    if (!empty($watermark)) {
+                        $preg = '{//([^/]+)/(.*/files/(fullsize|original)/)}';
+                        $replace = '//$1/w/$2';
+                        $matches = preg_match($preg, $file_markup);
+
+                        if ($matches[1] === 'digitalgallery.bgsu.edu') {
+                            $replace = '//lib.bgsu.edu/w/digitalgallery/$2';
+                        }
+
+                        $file_markup = preg_replace(
+                            $preg,
+                            $replace,
+                            $file_markup
+                        );
+                    }
+
+                    echo $file_markup;
                     ?>
                 <?php endforeach; ?>
             </div>

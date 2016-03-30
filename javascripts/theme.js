@@ -34,6 +34,7 @@ jQuery(function($) {
                 var pswp_options = {
                     index: pswp_items.length,
                     bgOpacity: 0.7,
+                    showHideOpacity: true,
 
                     getThumbBoundsFn: function(index) {
                         var thumbnail = $('img', pswp_items[index].el);
@@ -53,6 +54,18 @@ jQuery(function($) {
                     var gallery = new PhotoSwipe(
                         pswp, PhotoSwipeUI_Default, pswp_items, pswp_options
                     );
+
+                    gallery.listen('imageLoadComplete', function(index, item) {
+                        var w = item.container.lastChild.naturalWidth;
+                        var h = item.container.lastChild.naturalHeight;
+
+                        if (item.w !== w || item.h !== h) {
+                            item.w = w;
+                            item.h = h;
+                            gallery.invalidateCurrItems();
+                            gallery.updateSize(true);
+                        }
+                    });
 
                     var duration = gallery.options.showAnimationDuration;
 
