@@ -672,3 +672,35 @@ a.thumbnail:hover .description {
 .breadcrumb > li + li::before {
     padding: 0 2px;
 }
+
+
+/* Student Digital Gallery */
+.sdg {
+    background: #faa41a url(../images/sdg.png) no-repeat; 
+    background-size: contain;
+    border: 8px solid #faa41a;
+    border-radius: 16px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
+    color: #231f20;
+    display: inline-block;
+    font-family: 'Bookman Old Style', Georgia, serif;
+    height: 80px;
+    margin: 0 auto;
+    padding: 0 8px 0 72px;
+    text-align: center;
+    transition: 0.25s all ease-in-out !important;
+    width: 418px;
+}
+
+.sdg:hover {
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.5);
+    color: #231f20;
+    text-decoration: none;
+}
+
+.sdg strong {
+    font-size: 1.5em;
+    font-weight: normal;
+    line-height: 1.8;
+    text-transform: uppercase;
+}
