@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #FAFA48;
+}
+
+a, .breadcrumb {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.btn {
+    font-style: normal;
+}
+
+header {
+    background: #333 url(../../images/bg/oyi.png);
+}
+
+#public-nav-main {
+    background: #008080;
+    margin: 0 -9998px;
+    padding: 0 9999px;
+}
+
+#public-nav-main .navbar-brand {
+    display: none;
+}
+
+#public-nav-main .navbar-toggle {
+    margin: 8px 0;
+}
+
+#public-nav-main .nav {
+    background: none;
+    border: none;
+    box-shadow: none;
+    float: none !important;
+}
+
+#public-nav-main .navbar-nav > li > a {
+    border-radius: 0;
+    color: #fff;
+    padding: 8px 16px;
+    text-shadow: none;
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: #008080;
+    color: #FAFA48;
+    box-shadow: none;
+}
+
+.item.show #public-nav-main .navbar-nav > li.active > a {
+    background: inherit;
+    color: #fff;
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    background: #006060 !important;
+}
+
+#search-bar-nav {
+    margin: 0 16px;
+}
+
+main {
+    background: #fff;
+    border: 1px solid #e7e7e7;
+    border-top: none;
+    padding: 15px;
+}
+
+main h1 {
+    color: #008080;
+    font: 28px/1.2 'Arial Black', sans-serif;
+}
+
+main h2, main h3 {
+    color: #000;
+    font: 24px/1 'Arial Narrow', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+main h3 {
+    font-size: 20px;
+}
+
+#exhibit-pages {
+    display: none !important;
+}
