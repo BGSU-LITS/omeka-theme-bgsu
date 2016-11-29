@@ -113,6 +113,7 @@ footer .link-rss:focus {
 }
 
 
+
 /* Navbars */
 .navbar,
 .navbar-collapse,
@@ -279,7 +280,7 @@ main .navbar-nav {
 }
 
 .pagination {
-    margin: 0;
+    margin: 0 0 10px 0;
 }
 
 #item-filters > ul {
@@ -300,7 +301,7 @@ main .navbar-nav {
     margin-bottom: 20px;
 }
 
-.record-nav {
+.record-nav .nav {
     margin-bottom: 10px;
 }
 
@@ -309,6 +310,7 @@ main .navbar-nav {
         float: right;
     }
 }
+
 
 
 /* Forms */

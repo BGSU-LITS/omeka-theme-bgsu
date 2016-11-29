@@ -1,13 +1,21 @@
 <?php
+return include('cace.php');
+
 // Builds query string appended to requests for Bootstrap CSS.
 $theme_query = http_build_query(
     // Array items are defined as Less variables when compiling CSS.
     array(
         // Color for most links and buttons.
-        'brand-primary' => '#A43B23',
+        'brand-primary' => '#FF7300',
+
+        // Color for certain small text.
+        'gray-light' => '#9A5638',
+
+        // Color for headings.
+        'headings-color' => '#4F2C1D',
 
         // Font stack for headings.
-        'font-family-base' => "Georgia,'Times New Roman',serif"
+        'headings-font-family' => "'Sorts Mill Goudy', serif"
     ),
     '',
     '&'
@@ -27,9 +35,9 @@ $theme_style = array(
         // Appears below header.
         // Typically logo for the collection/exhibit.
         'navbar' =>
-            '<img width="290" height="130" class="logo-header"'.
-            ' src="'. img('logo/cac.svg'). '"'.
-            ' alt="'. __('Center for Archival Collections'). '">',
+            '<img width="245" height="53" class="logo-header"'.
+            ' src="https://lib.bgsu.edu/assets/img/cac.svg"'.
+            ' alt="'. __('BGSU Center for Archival Collections'). '">',
 
         // Appears in the footer.
         // Typically the BGSU University Libraries logo.

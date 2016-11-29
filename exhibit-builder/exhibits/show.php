@@ -40,14 +40,14 @@ while ($currentPage->parent_id) {
     </div>
 <?php endif; ?>
 
-<nav id="exhibit-page-navigation">
-    <div class="pull-left">
+<nav class="row" id="exhibit-page-navigation">
+    <div class="col-sm-5">
         <?php echo exhibit_builder_link_to_previous_page(); ?>
     </div>
-    <div class="pull-right">
+    <div class="col-sm-5 col-sm-push-2 text-right">
         <?php echo exhibit_builder_link_to_next_page(); ?>
     </div>
-    <div class="text-center">
+    <div class="col-sm-2 col-sm-pull-5 text-center">
         <?php echo exhibit_builder_link_to_exhibit(null, 'Exhibit Home'); ?>
     </div>
 </nav>

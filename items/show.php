@@ -24,20 +24,29 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
     <nav id="exhibit-pages" class="navbar navbar-default collapse navbar-collapse">
         <?php echo include(__DIR__. '/../nav/exhibit-pages.php'); ?>
     </nav>
-<?php endif; ?>
-
-<h1><?php echo $pageTitle; ?></h1>
-
-<?php if (!empty($exhibit)): ?>
+    <h1><?php echo $pageTitle; ?></h1>
     <ol class="breadcrumb">
         <li><?php echo exhibit_builder_link_to_exhibit(); ?></li>
         <li class="active"><?php echo $pageTitle; ?></li>
     </ol>
+<?php elseif (!empty($collection)): ?>
+    <div class="clearfix">
+        <nav class="record-nav">
+            <?php echo include(__DIR__. '/../nav/items.php'); ?>
+        </nav>
+        <h1><?php echo $pageTitle; ?></h1>
+    </div>
+    <ol class="breadcrumb">
+        <li><?php echo link_to_collection_for_item(); ?></li>
+        <li class="active"><?php echo $pageTitle; ?></li>
+    </ol>
+<?php else: ?>
+    <h1><?php echo $pageTitle; ?></h1>
 <?php endif; ?>
 
 <?php if (!empty($style['item']['show']['pictures'])): ?>
     <?php if ($content = metadata('item', array(ElementSet::ITEM_TYPE_NAME, 'Content'))): ?>
-        <div id="itemfiles" class="element pictures">
+        <div id="itemfiles" class="element pictures clearfix">
             <?php if (is_string($style['item']['show']['pictures'])): ?>
                 <h3><?php echo $style['item']['show']['pictures']; ?></h3>
             <?php endif; ?>
@@ -46,7 +55,7 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
             </div>
         </div>
     <?php elseif (metadata('item', 'has files')): ?>
-        <div id="itemfiles" class="element pictures">
+        <div id="itemfiles" class="element pictures clearfix">
             <?php if (is_string($style['item']['show']['pictures'])): ?>
                 <h3><?php echo $style['item']['show']['pictures']; ?></h3>
             <?php endif; ?>
@@ -175,19 +184,6 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
 <?php endif; ?>
 
 <?php fire_plugin_hook('public_items_show', array('view' => $this, 'item' => $item)); ?>
-
-<?php if (empty($collection) && empty($exhibit)): ?>
-    <nav>
-        <ul class="pager">
-            <li class="previous">
-                <?php echo link_to_previous_item_show(); ?>
-            </li>
-            <li class="next">
-                <?php echo link_to_next_item_show(); ?>
-            </li>
-        </ul>
-    </nav>
-<?php endif; ?>
 
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="pswp__bg"></div>

@@ -3,16 +3,15 @@ $pageTitle = __('Browse Exhibits');
 echo head(array('title' => $pageTitle, 'bodyclass' => 'exhibits browse'));
 ?>
 
-<div class="row">
-    <div class="record-title col-md-6">
-        <h1>
-            <?php echo $pageTitle; ?>
-            <small><?php echo __('(%s total)', $total_results); ?></small>
-        </h1>
-    </div>
-    <nav class="record-nav col-md-6">
+<div class="clearfix">
+    <nav class="record-nav">
         <?php echo include(__DIR__. '/../../nav/exhibits.php'); ?>
     </nav>
+
+    <h1>
+        <?php echo $pageTitle; ?>
+        <small><?php echo __('(%s total)', $total_results); ?></small>
+    </h1>
 </div>
 
 <?php echo item_search_filters(); ?>

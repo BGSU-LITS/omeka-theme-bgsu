@@ -111,18 +111,19 @@ if (!isset($buttonText)) {
             ?>
         </div>
     </div>
-    <?php if (isset($_GET['collection'])): ?>
-        <input type="hidden" name="collection" value="<?php echo html_escape($_GET['collection']); ?>">
-    <?php else: ?>
-        <div class="form-group">
-            <?php
-            echo $this->formLabel(
-                'collection-search',
-                __('Search by Collection'),
-                array('class' => 'col-md-3 control-label')
-            );
-            ?>
-            <div class="col-md-9">
+    <div class="form-group">
+        <?php
+        echo $this->formLabel(
+            'collection-search',
+            __('Search by Collection'),
+            array('class' => 'col-md-3 control-label')
+        );
+        ?>
+        <div class="col-md-9">
+            <?php if (isset($_GET['collection'])): ?>
+                <input type="text" value="<?php echo metadata(get_record_by_id('collection', $_GET['collection']), array('Dublin Core', 'Title')); ?>" class="form-control" disabled>
+                <input type="hidden" name="collection" value="<?php echo html_escape($_GET['collection']); ?>">
+            <?php else: ?>
                 <?php
                 echo $this->formSelect(
                     'collection',
@@ -131,9 +132,9 @@ if (!isset($buttonText)) {
                     get_table_options('Collection')
                 );
                 ?>
-            </div>
+            <?php endif; ?>
         </div>
-    <?php endif; ?>
+    </div>
     <div class="form-group">
         <?php
         echo $this->formLabel(

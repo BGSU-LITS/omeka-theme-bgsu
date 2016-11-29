@@ -1,86 +1,46 @@
-body {
-    background: #CDB49E url(../../images/bg/cac.jpg);
-    font-size: 16px;
+@font-face {
+    font-family: 'Sorts Mill Goudy';
+    src: url('../../fonts/goudystm.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sorts Mill Goudy';
+    src: url('../../fonts/goudystm-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
 }
 
 header {
-    background: rgba(164, 59, 35, 0.7);
+    background: #fff;
+    border-top: 16px solid #ff7300;
+    margin-bottom: 8px;
 }
 
 #public-nav-main {
-    background: rgba(247, 230, 182, 0.7);
-    box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.37);
-    margin: 0 -9999px;
-    padding: 0 9999px;
-    position: relative;
-    z-index: 10;
+    margin: 0;
+    min-height: 0;
 }
 
-#public-nav-main .navbar-brand {
+#public-nav-main .navbar-brand,
+#public-nav-main .nav {
     display: none;
 }
 
 #public-nav-main .navbar-toggle {
-    margin: 8px 0;
+    margin: -80px 0 0 0;
 }
 
-#public-nav-main .navbar-nav {
-    background: none;
-    border: none;
-    box-shadow: none;
-    float: none !important;
+#search-form-header {
+    margin-top: 12px;
 }
 
-#public-nav-main .navbar-nav > li > a {
-    border-radius: 0;
-    color: #A43B23;
-    text-shadow: none;
+#search-bar-nav {
+    margin-top: 0;
+    padding-top: 0;
 }
 
-#public-nav-main .navbar-nav > li.active > a {
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: none;
-}
-
-.item.show #public-nav-main .navbar-nav > li.active > a {
-    background: inherit;
-}
-
-#public-nav-main .navbar-nav > li > a:hover,
-#public-nav-main .navbar-nav > li > a:focus {
-    background: rgba(255, 255, 255, 0.2) !important;
-}
-
-main {
-    background: rgba(255, 255, 255, 0.7);
-    box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.37);
-    padding: 15px;
-    position: relative;
-    z-index: 20;
-}
-
-main h1, main h2, main h3, main h4, main h5, main h6 {
-    text-shadow: #ccc 1px 2px;
-}
-
-main hr {
-    border-top-color: #999;
-}
-
-footer {
-    background: rgba(248, 241, 216, 0.7);
-    box-shadow: 1px 2px 2px 0 rgba(0, 0, 0, 0.37);
-    padding: 15px;
-}
-
-#exhibit-pages {
-    display: none !important;
-}
-
-.record .tags a, .element .tags a {
-    background: rgba(248, 241, 216, 0.7);
-}
-
-.record .tags a::before, .element .tags a::before {
-    color: #EDE6E0;
+#content {
+    min-height: calc(100vh - 190px);
 }

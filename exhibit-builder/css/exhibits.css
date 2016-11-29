@@ -54,3 +54,9 @@
 .exhibit-block .exhibit-items > * {
     margin-bottom: 0;
 }
+
+@media (max-width: 767px) {
+    #exhibit-page-navigation .text-center, #exhibit-page-navigation .text-right {
+        text-align: left;
+    }
+}
