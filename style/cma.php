@@ -144,7 +144,9 @@ $theme_style = array(
                     'References' =>
                         __('Recording Information in the Library’s Catalog'),
                     'Subject' =>
-                        __('Library of Congress Subject Headings')
+                        __('Library of Congress Subject Headings'),
+                    'Rights' =>
+                        __('Rights')
                 )
             ),
 
