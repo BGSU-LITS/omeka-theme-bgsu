@@ -5,7 +5,7 @@ $params = array(
     'sort_field' => 'random'
 );
 
-$exhibits = get_records('Exhibit', $params, 3);
+$exhibits = get_records('Exhibit', $params, 6);
 $count = 0;
 ?>
 
