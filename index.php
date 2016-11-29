@@ -19,12 +19,12 @@ if (file_exists($file)) {
 }
 ?>
 
-<a href="https://digitalgallery.bgsu.edu/student/" class="sdg">
-    <strong>Student Digital Gallery</strong><br>
-    See exhibits created by BGSU students
-</a>
-
 <?php if (!empty($records)): ?>
+    <a href="https://digitalgallery.bgsu.edu/student/" class="sdg">
+        <strong>Student Digital Gallery</strong><br>
+        See exhibits created by BGSU students
+    </a>
+
     <div class="row">
         <?php foreach (array_keys($records) as $type): ?>
             <div class="col-md-<?php echo $span; ?>">
