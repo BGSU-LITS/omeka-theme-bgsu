@@ -65,6 +65,8 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
                     $w = '';
                     $h = '';
 
+                    $watermark = false;
+
                     $mime_types = array(
                         'image/gif',
                         'image/jpeg',
@@ -72,9 +74,9 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
                         'application/pdf'
                     );
 
-                    $watermark = get_theme_option('Watermark') !== '0';
-
                     if (in_array($file->mime_type, $mime_types)) {
+                        $watermark = get_theme_option('Watermark') !== '0';
+
                         if ($file->has_derivative_image) {
                             $metadata = json_decode($file->metadata, true);
 
@@ -106,12 +108,13 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
                     );
 
                     if (!empty($watermark)) {
-                        $preg = '{//([^/]+)/(.*/files/(fullsize|original)/)}';
+                        $preg = '{//([^/]+)/((.*/)?files/(fullsize|original)/)}';
                         $replace = '//$1/w/$2';
-                        $matches = preg_match($preg, $file_markup);
 
-                        if ($matches[1] === 'digitalgallery.bgsu.edu') {
-                            $replace = '//lib.bgsu.edu/w/digitalgallery/$2';
+                        if (preg_match($preg, $file_markup, $matches)) {
+                            if ($matches[1] === 'digitalgallery.bgsu.edu') {
+                                $replace = '//lib.bgsu.edu/w/digitalgallery/$2';
+                            }
                         }
 
                         $file_markup = preg_replace(
