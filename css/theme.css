@@ -113,6 +113,16 @@ footer .link-rss:focus {
 }
 
 
+/* Highlights */
+.highlight {
+    border-left: 3px double #ccc;
+    color: #666;
+    font-size: smaller;
+    margin: 0;
+    padding: 5px 10px;
+}
+
+
 
 /* Navbars */
 .navbar,
@@ -678,7 +688,7 @@ a.thumbnail:hover .description {
 
 /* Student Digital Gallery */
 .sdg {
-    background: #faa41a url(../images/sdg.png) no-repeat; 
+    background: #faa41a url(../images/sdg.png) no-repeat;
     background-size: contain;
     border: 8px solid #faa41a;
     border-radius: 16px;
