@@ -3,6 +3,17 @@ $pageTitle = metadata('item', array('Dublin Core', 'Title'));
 $style = include(__DIR__. '/../style/'. get_theme_option('Style'). '.php');
 $params = Zend_Controller_Front::getInstance()->getRequest()->getParams();
 
+if (preg_match('/\.jpg$/', $params['id'])) {
+    $file = getcwd() . DIRECTORY_SEPARATOR . 'files' . DIRECTORY_SEPARATOR .
+        $item->getFile()->getStoragePath('thumbnail');
+
+    if (file_exists($file)) {
+        header('Content-Type: image/jpeg');
+        readfile($file);
+        exit();
+    }
+}
+
 if (!empty($style['item']['show']['pictures'])) {
     add_file_display_callback('application/pdf', function ($file, $options) {
         return
