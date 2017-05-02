@@ -1,0 +1,59 @@
+body {
+    background: url(../../images/bg/smc.png);
+    color: #000;
+}
+
+header, main {
+    background: transparent;
+}
+
+main h1 {
+    font-weight: bold;
+}
+
+#content a, #public-nav-main a, footer a {
+    font-family: 'Bookman Old Style', Bookman, serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#content .pagination a, #content .tags a {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: normal;
+}
+
+#content .breadcrumb > .active {
+    color: #777;
+}
+
+#public-nav-main .navbar-header {
+    padding: 0;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 5px rgba(0, 0, 0, 0.075);
+    margin-bottom: 12px;
+}
+
+#public-nav-main .navbar-nav {
+    background: url(../../images/bg/smc.png);
+    border: 1px solid #fed088;
+}
+
+#public-nav-main .navbar-nav > li > a {
+    border-bottom: 1px solid #fed088;
+    color: #a65707;
+}
+
+#public-nav-main .navbar-nav > li:last-child > a {
+    border-bottom: none;
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: rgba(241, 181, 23, 0.1);
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    background: rgba(241, 181, 23, 0.2) !important;
+    color: #5d3104;
+    text-decoration: underline;
+}

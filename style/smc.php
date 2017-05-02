@@ -4,13 +4,13 @@ $theme_query = http_build_query(
     // Array items are defined as Less variables when compiling CSS.
     array(
         // Color for most links and buttons.
-        'brand-primary' => '#b12b28',
-
-        // Font stack used for most text.
-        'font-family-base' => '"Big Caslon","Book Antiqua","Palatino Linotype",Georgia,serif',
+        'brand-primary' => '#a65707',
 
         // Color for headings.
-        'headings-color' => '#0c1f57'
+        'headings-color' => '#f48a1f',
+
+        // Font stack for headings.
+        'headings-font-family' => "'Bookman Old Style', Bookman, serif"
     ),
     '',
     '&'
@@ -24,21 +24,21 @@ $theme_style = array(
         // Typically the BGSU logo.
         'header' =>
             '<img width="113" height="34" class="logo-header"'.
-            ' src="https://lib.bgsu.edu/assets/img/bgsu-white.svg"'.
+            ' src="https://lib.bgsu.edu/assets/img/bgsu.svg"'.
             ' alt="'. __('BGSU'). '">',
 
         // Appears below header.
         // Typically logo for the collection/exhibit.
         'navbar' =>
-            '<img width="250" height="132" class="logo-navbar"'.
-            ' src="'. img('logo/nw.png'). '"'.
-            ' alt="'. __('Nickel Weeklies'). '">',
+            '<img width="288" height="144" class="logo-navbar"'.
+            ' src="'. img('logo/smc.png'). '"'.
+            ' alt="'. __('Sheet Music Collection'). '">',
 
         // Appears in the footer.
         // Typically the BGSU University Libraries logo.
         'footer' =>
             '<img width="190" height="50" class="logo-footer"'.
-            ' src="https://lib.bgsu.edu/assets/img/ul-black.svg"'.
+            ' src="https://lib.bgsu.edu/assets/img/ul.svg"'.
             ' alt="'. __('BGSU University Libraries'). '">',
     ),
 
@@ -80,9 +80,9 @@ $theme_style = array(
             // list, and each value is the string title for that sort.
             'sort' => array(
                 'Dublin Core,Title' => __('Title'),
-                'Dublin Core,Alternative Title' => __('Alternative Title'),
-                'Dublin Core,Contributor' => __('Author'),
-                'Dublin Core,Is Part Of' => __('Series Title')
+                'Dublin Core,Creator' => __('Creator'),
+                'Dublin Core,Publisher' => __('Publisher'),
+                'added' => __('Date Added')
             ),
 
             // If not empty, display thumbnail picture.
@@ -95,15 +95,14 @@ $theme_style = array(
             // a string, it specifies a title to be displayed for the element.
             'elements' => array(
                 'Dublin Core' => array(
-                    'Alternative Title' => __('Alternative Title:'),
-                    'Contributor' => __('Author:'),
-                    'Is Part Of' => __('Series Title:')
+                    'Creator' => __('Creator:'),
+                    'Publisher' => __('Publisher:')
                 )
             ),
 
             // If not empty, display description truncated to 250 characters.
             // If a string, display as title for the descripton.
-            'description' => false,
+            'description' => true,
 
             // If not empty, display tags.
             // If a string, display as title for the tags.
@@ -114,7 +113,7 @@ $theme_style = array(
         'show' => array(
             // If not empty, display thumbnail pictures or embedded content.
             // If a string, display as title for the pictures.
-            'pictures' => __('Images'),
+            'pictures' => true,
 
             // If true, display all elements specified for the item.
             // If an array, each key is an element set name and value is which
@@ -122,22 +121,7 @@ $theme_style = array(
             // displayed. If an array, each key is the name of an element
             // from the element set that should be displayed. If the value is
             // a string, it specifies a title to be displayed for the element.
-            'elements' => array(
-                'Dublin Core' => array(
-                    'Title' => __('Title'),
-                    'Alternative Title' => __('Alternative Title'),
-                    'Contributor' => __('Author'),
-                    'Is Part Of' => __('Series Title'),
-                    'Identifier' => __('Volume/Number'),
-                    'Date Created' => __('Date'),
-                    'Publisher' => __('Publisher'),
-                    'Description' => __('Description'),
-                    'Subject' => __('Subjects'),
-                    'Language' => __('Language'),
-                    'Spatial Coverage' => __('Spatial Coverage'),
-                    'Temporal Coverage' => __('Temporal Coverage')
-                )
-            ),
+            'elements' => true,
 
             // If not empty, display thumbnails linking to all item files.
             // If a string, display as title for the files.
@@ -187,7 +171,7 @@ queue_css_file('theme');
 queue_css_file('sidebar');
 
 // Load CSS file for this style.
-queue_css_file('style/nw');
+queue_css_file('style/smc');
 
 // Load Javascript files for Bootstrap and the theme.
 queue_js_url('https://lib.bgsu.edu/assets/js/bootstrap.js');
