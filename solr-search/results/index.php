@@ -55,6 +55,22 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
 
                                 switch ($doc->resulttype) {
                                     case 'Item':
+                                        $description = metadata(
+                                            $item,
+                                            array('Dublin Core', 'Description'),
+                                            array('snippet' => 250, 'no_escape' => true)
+                                        );
+
+                                        $collection = $item->getCollection();
+
+                                        if ($collection) {
+                                            $description = 'From Collection: ' . 
+                                                link_to_collection(null, array(), 'show', $collection) . 
+                                                '<br>' . $description;
+                                        }
+
+                                        break;
+
                                     case 'Collection':
                                         $description = metadata(
                                             $item,
@@ -76,9 +92,9 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'search'));
                                     case 'Exhibit Page':
                                         $exhibit = $item->getExhibit();
 
-                                        $description = 'From: <a href="' .
+                                        $description = 'From Exhibit: <a href="' .
                                             record_url($exhibit, 'show') . '">' .
-                                            $item->getExhibit()->title . '</a>';
+                                            $exhibit->title . '</a>';
 
                                         break;
                                 }
