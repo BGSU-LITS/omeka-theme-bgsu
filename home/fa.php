@@ -23,7 +23,10 @@
 
             <h4>Browse Sub-Collections</h4>
             <ul>
-                <?php foreach (metadata($collection, array('Dublin Core', 'Subject'), array('all' => true)) as $subject): ?>
+                <?php 
+                $subjects = metadata($collection, array('Dublin Core', 'Subject'), array('all' => true)) ;
+                sort($subjects);
+                foreach ($subjects as $subject): ?>
                     <li>
                         <?php
                         $queryParams = array(
