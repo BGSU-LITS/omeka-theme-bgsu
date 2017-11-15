@@ -127,7 +127,7 @@ $theme_style = array(
 
             // If not empty, display recommended citation.
             // If a string, display as title for the recommended citation.
-            'citation' => __('Citation')
+            'citation' => __('MLA Citation')
         )
     )
 );
