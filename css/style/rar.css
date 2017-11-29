@@ -1,0 +1,89 @@
+body {
+    background: #fff url(../../images/bg/rar.png) no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background: #9d0202;
+}
+
+.logo-header {
+    background: #fff;
+    padding: 10px 10px 0 10px;
+}
+
+#public-nav-main {
+    background: #000;
+    margin: 0 -9998px;
+    padding: 0 9999px;
+}
+
+#public-nav-main .navbar-brand {
+    display: none;
+}
+
+#public-nav-main .navbar-toggle {
+    margin: 8px 0;
+}
+
+#public-nav-main .nav {
+    background: none;
+    border: none;
+    box-shadow: none;
+    float: none !important;
+}
+
+#public-nav-main .navbar-nav > li > a {
+    border-radius: 0;
+    color: #fff;
+    text-shadow: none;
+}
+
+#public-nav-main .navbar-nav > li.active > a {
+    background: #9d0202;
+    box-shadow: none;
+}
+
+.item.show #public-nav-main .navbar-nav > li.active > a {
+    background: inherit;
+}
+
+#public-nav-main .navbar-nav > li > a:hover,
+#public-nav-main .navbar-nav > li > a:focus {
+    background: #fff !important;
+    color: #9d0202;
+}
+
+#exhibit-pages {
+    display: none !important;
+}
+
+main {
+    background: #fff;
+    margin: 40px 0;
+    padding: 20px;
+}
+
+main h1 {
+    font-weight: bold;
+}
+
+main h2 {
+    font-style: italic;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    margin: 40px 0;
+    padding: 10px 20px;
+}
+
+footer a {
+    color: #c4c3c3;
+}
+
+footer a:active,
+footer a:hover {
+    color: #949393;
+}
