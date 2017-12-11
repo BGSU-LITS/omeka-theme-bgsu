@@ -133,7 +133,7 @@ $theme_style = array(
                         __('Other Titles or Main Performers'),
                     'Contributor' =>
                         __('Performer(s)'),
-                    'Date Created' =>
+                    'Date' =>
                         __('Date of Performance'),
                     'Is Part Of' =>
                         __('Series'),

@@ -118,7 +118,7 @@ $theme_style = array(
             // a string, it specifies a title to be displayed for the element.
             'elements' => array(
                 'Dublin Core' => array(
-                    'Identifier' => __('BGSU Catalog Record'),
+                    'Is Referenced By' => __('BGSU Catalog Record'),
                     'Title' => __('Title'),
                     'Creator' => __('Author'),
                     'Contributor' => __('Artist'),
