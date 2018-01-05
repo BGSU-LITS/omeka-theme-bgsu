@@ -110,6 +110,9 @@ $theme_style = array(
             // from the element set that should be displayed. If the value is
             // a string, it specifies a title to be displayed for the element.
             'elements' => array(
+                'Dublin Core' => array(
+                    'Description' => __('Description')
+                ),
                 'Text Item Type Metadata' => true,
                 'Manuscript Item Type Metadata' => true
             ),
