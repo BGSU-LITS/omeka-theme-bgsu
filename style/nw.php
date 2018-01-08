@@ -135,7 +135,8 @@ $theme_style = array(
                     'Subject' => __('Subjects'),
                     'Language' => __('Language'),
                     'Spatial Coverage' => __('Spatial Coverage'),
-                    'Temporal Coverage' => __('Temporal Coverage')
+                    'Temporal Coverage' => __('Temporal Coverage'),
+                    'Rights' => __('Rights')
                 )
             ),
 

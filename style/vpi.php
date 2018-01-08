@@ -124,7 +124,8 @@ $theme_style = array(
                     'Contributor' => __('Artist'),
                     'Date' => __('Date'),
                     'Description' => __('Front Cover Blurb'),
-                    'Type' => __('Genre')
+                    'Type' => __('Genre'),
+                    'Rights' => __('Rights')
                 )
             ),
 

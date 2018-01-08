@@ -127,7 +127,8 @@ $theme_style = array(
                     'Title' => __('Title'),
                     'Description' => __('Description'),
                     'Date' => __('Date'),
-                    'Contributor' => __('Contributor')
+                    'Contributor' => __('Contributor'),
+                    'Rights' => __('Rights')
                 )
             ),
 

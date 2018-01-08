@@ -122,7 +122,8 @@ $theme_style = array(
                     'Temporal Coverage' => __('Decade Manufactured and Sold'),
                     'Is Referenced By' => __('More Information'),
                     'Provenance' => __('Provenance'),
-                    'Subject' => __('Library of Congress Subject Headings')
+                    'Subject' => __('Library of Congress Subject Headings'),
+                    'Rights' => __('Rights')
                 )
             ),
 
