@@ -5,6 +5,26 @@ if (empty($style['item']['show']['elements'])) {
     return;
 }
 
+$type = $record->getProperty('item_type_name');
+
+if (!empty($type)) {
+    $elementsForDisplay['Dublin Core']['Type']['texts'][] = $type;
+}
+
+$mimeTypes = array_unique(array_map(
+    function ($file) {
+        return $file->mime_type;
+    },
+    $record->getFiles()
+));
+
+foreach ($mimeTypes as $mimeType) {
+    $elementsForDisplay['Dublin Core']['Format']['texts'][] = $mimeType;
+}
+
+$elementsForDisplay['Dublin Core']['Identifier']['texts'][] =
+    record_url($record, 'show', true);
+
 if (!is_array($style['item']['show']['elements'])) {
     $style['item']['show']['elements'] = array();
 
