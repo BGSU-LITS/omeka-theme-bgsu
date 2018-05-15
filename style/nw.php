@@ -127,7 +127,7 @@ $theme_style = array(
                     'Title' => __('Title'),
                     'Alternative Title' => __('Alternative Title'),
                     'Contributor' => __('Author'),
-                    'Is Part Of' => __('Series Title'),
+                    'Relation' => __('Series Title'),
                     'Identifier' => __('Volume/Number'),
                     'Date' => __('Date'),
                     'Publisher' => __('Publisher'),
@@ -136,6 +136,7 @@ $theme_style = array(
                     'Language' => __('Language'),
                     'Spatial Coverage' => __('Spatial Coverage'),
                     'Temporal Coverage' => __('Temporal Coverage'),
+                    'Is Part Of' => __('Is Part Of'),
                     'Rights' => __('Rights')
                 )
             ),
