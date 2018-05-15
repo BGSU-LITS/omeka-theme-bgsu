@@ -114,7 +114,7 @@ $theme_style = array(
         'show' => array(
             // If not empty, display thumbnail pictures or embedded content.
             // If a string, display as title for the pictures.
-            'pictures' => __('Images'),
+            'pictures' => true,
 
             // If true, display all elements specified for the item.
             // If an array, each key is an element set name and value is which
