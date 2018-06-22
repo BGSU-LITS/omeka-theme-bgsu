@@ -66,10 +66,8 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
                 <?php echo $content; ?>
                 <?php foreach ($item->Files as $file): ?>
                     <?php
-                    if ($content && preg_match('#^https?://#', $file->original_filename)) {
-                        if (!preg_match('#^https?://\w+(\.bgsu\.edu)?/#', $file->original_filename)) {
-                            continue;
-                        }
+                    if ($content && metadata($file, array('Dublin Core', 'Source'))) {
+                        continue;
                     }
 
                     $w = '';
