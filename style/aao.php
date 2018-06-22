@@ -121,22 +121,7 @@ $theme_style = array(
             // displayed. If an array, each key is the name of an element
             // from the element set that should be displayed. If the value is
             // a string, it specifies a title to be displayed for the element.
-            'elements' => array(
-                'Dublin Core' => array(
-                    'Title' => __('Title'),
-                    'Alternative Title' => __('Alternative Title'),
-                    'Contributor' => __('Manufacturer'),
-                    'Description' => __('Description'),
-                    'Creator' => __('Creator'),
-                    'Publisher' => __('Publisher'),
-                    'Medium' => __('Materials'),
-                    'Extent' => __('Dimensions'),
-                    'Temporal Coverage' => __('Decade Manufactured and Sold'),
-                    'Is Referenced By' => __('More Information'),
-                    'Subject' => __('Library of Congress Subject Headings'),
-                    'Rights' => __('Rights')
-                )
-            ),
+            'elements' => true,
 
             // If not empty, display thumbnails linking to all item files.
             // If a string, display as title for the files.
