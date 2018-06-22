@@ -56,23 +56,22 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
 <?php endif; ?>
 
 <?php if (!empty($style['item']['show']['pictures'])): ?>
-    <?php if ($content = metadata('item', array(ElementSet::ITEM_TYPE_NAME, 'Content'))): ?>
+    <?php $content = metadata('item', array(ElementSet::ITEM_TYPE_NAME, 'Content')); ?>
+    <?php if ($content || metadata('item', 'has files')): ?>
         <div id="itemfiles" class="element pictures clearfix">
             <?php if (is_string($style['item']['show']['pictures'])): ?>
                 <h3><?php echo $style['item']['show']['pictures']; ?></h3>
             <?php endif; ?>
             <div class="element-text">
                 <?php echo $content; ?>
-            </div>
-        </div>
-    <?php elseif (metadata('item', 'has files')): ?>
-        <div id="itemfiles" class="element pictures clearfix">
-            <?php if (is_string($style['item']['show']['pictures'])): ?>
-                <h3><?php echo $style['item']['show']['pictures']; ?></h3>
-            <?php endif; ?>
-            <div class="element-text">
                 <?php foreach ($item->Files as $file): ?>
                     <?php
+                    if ($content && preg_match('#^https?://#', $file->original_filename)) {
+                        if (!preg_match('#^https?://\w+(\.bgsu\.edu)?/#', $file->original_filename)) {
+                            continue;
+                        }
+                    }
+
                     $w = '';
                     $h = '';
 
