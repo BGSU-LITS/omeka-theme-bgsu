@@ -15,13 +15,25 @@ if (preg_match('/\.jpg$/', $params['id'])) {
 }
 
 if (!empty($style['item']['show']['pictures'])) {
-    add_file_display_callback('application/pdf', function ($file, $options) {
-        return
-            '<a href="'. $file->getWebPath('fullsize'). '">'.
-            '<img src="'. $file->getWebPath('thumbnail'). '" alt="Cover"></a>'.
-            '<div><a class="btn btn-default" href="'. $file->getWebPath('original'). '">'.
-            __('Download PDF'). '</a></div>';
-    });
+    if (!empty($style['item']['show']['covers'])) {
+        add_file_display_callback('application/pdf', function ($file, $options) {
+            return
+                '<a href="'. $file->getWebPath('fullsize'). '">'.
+                '<img src="'. $file->getWebPath('thumbnail'). '" alt="Cover"></a>'.
+                '<div><a class="btn btn-default" href="'. 
+                $file->getWebPath('original'). '">'.
+                __('Download PDF'). '</a></div>';
+        });
+    } else {
+        add_file_display_callback('application/pdf', function ($file, $options) {
+            return
+                '<a href="'. $file->getWebPath('original'). '">'.
+                '<img src="'. $file->getWebPath('thumbnail'). '" alt="Cover"></a>'.
+                '<div><a class="btn btn-default" href="'. 
+                $file->getWebPath('original'). '">'.
+                __('Download PDF'). '</a></div>';
+        });
+    }
 }
 
 if (!empty($item->collection_id)) {
@@ -82,9 +94,12 @@ echo head(array('title' => $pageTitle, 'bodyclass' => 'item show', 'collection' 
                     $mime_types = array(
                         'image/gif',
                         'image/jpeg',
-                        'image/png',
-                        'application/pdf'
+                        'image/png'
                     );
+
+                    if (!empty($style['item']['show']['covers'])) {
+                        $mime_types[] = 'application/pdf';
+                    }
 
                     if (in_array($file->mime_type, $mime_types)) {
                         $watermark = get_theme_option('Watermark') !== '0';

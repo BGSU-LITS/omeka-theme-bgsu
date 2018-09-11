@@ -31,6 +31,10 @@ jQuery(function($) {
             };
 
             if (item.src && item.msrc && item.w && item.h) {
+                if (item.src.match(/\.pdf$/)) {
+                    return;
+                }
+
                 var pswp_options = {
                     index: pswp_items.length,
                     bgOpacity: 0.7,

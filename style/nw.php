@@ -116,6 +116,9 @@ $theme_style = array(
             // If a string, display as title for the pictures.
             'pictures' => __('Images'),
 
+            // If not empty, covers will be shown separately from PDF files.
+            'covers' => true,
+
             // If true, display all elements specified for the item.
             // If an array, each key is an element set name and value is which
             // items to display from that element set. If true, all items are
