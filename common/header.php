@@ -102,11 +102,15 @@
                         <?php echo search_form(array('form_attributes' => array('id' => 'search-bar-nav', 'class' => 'navbar-form'), 'limiters' => @$style['search'])); ?>
                     </div>
                     <?php
-                    if ($style['navbar'] !== true) {
+                    if ($style['navbar'] === true) {
+                        $navbar = public_nav_main();
+                    } else {
                         $navbar = include($style['navbar']);
-                        echo $navbar->setUlClass('nav navbar-nav navbar-right');
                     }
 
+                    if (!empty($navbar)) {
+                        echo $navbar->setUlClass('nav navbar-nav navbar-right');
+                    }
                     ?>
                 </div>
             </nav>
